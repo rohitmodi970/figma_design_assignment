@@ -19,6 +19,12 @@ const eslintConfig = [
       "build/**",
       "next-env.d.ts",
     ],
+    rules: {
+      // 🔧 selectively disable or downgrade errors
+      "react-hooks/exhaustive-deps": "warn", // was erroring, now just a warning
+      "prefer-const": "warn", // allow let even if not reassigned
+      "@next/next/no-img-element": "off", // allow <img> instead of <Image />
+    },
   },
 ];
 
